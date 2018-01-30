@@ -140,10 +140,10 @@ public class StatusSender extends AsyncTask<String, Void, String[]>
                 tv_status.setText(activity.getString(R.string.tv_status_404));
                 break;
             default:
-                tv_status.setText(activity.getString(R.string.tv_status_error));
+                tv_status.setText(activity.getString(R.string.tv_status_error)+response[0]);
                 break;
         }
-        //Wenn Skript Status 20 geliefert hat, wird die Variable "ok" auf "true" gesetzt und diese Abfrage läuft durch
+        //Wenn Skript Status 200 geliefert hat, wird die Variable "ok" auf "true" gesetzt und diese Abfrage läuft durch
         if(ok)
         {
             //Wechsle zum gesendeten Status, um den passenden Buttontext zu ändern

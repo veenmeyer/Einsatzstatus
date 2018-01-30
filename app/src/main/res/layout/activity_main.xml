@@ -28,74 +28,104 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status">
 
+
         <Button
             android:id="@+id/feueralarm"
+            android:text="Feueralarm"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:width="140dp"
             android:height="140dp"
-            android:background="@color/red"
-            android:text="@string/btn_feueralarn"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:background="@drawable/feueralarm"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="8"
+            android:shadowRadius="5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+            />
 
         <Button
             android:id="@+id/hilfeleistung"
+            android:text="Hilfeleistung"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:width="140dp"
             android:height="140dp"
-            android:background="@color/blue"
-            android:text="@string/btn_hilfeleistung"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:background="@drawable/hilfeleistung"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="8"
+            android:shadowRadius="5"
             app:layout_constraintLeft_toRightOf="@+id/feueralarm"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+            />
 
         <Button
             android:id="@+id/uebung"
+            android:text="Übungsdienst"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:width="140dp"
             android:height="140dp"
-            android:background="@color/yellow"
-            android:text="@string/btn_uebung"
-            android:textSize="16sp"
+            android:background="@drawable/uebungsdienst"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="8"
+            android:shadowRadius="5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/feueralarm" />
+            />
 
         <Button
             android:id="@+id/sonstiger"
+
+            android:text="Sonstiger Einsatz"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:width="140dp"
             android:height="140dp"
-            android:background="@color/green"
-            android:text="@string/btn_sonstiger"
-            android:textSize="16sp"
+            android:background="@drawable/sonstiger_einsatz"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="8"
+            android:shadowRadius="5"
             app:layout_constraintLeft_toRightOf="@+id/uebung"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hilfeleistung" />
+            />
 
         <Button
             android:id="@+id/einsatzbereit"
+            android:text="Einsatzbereit"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:width="285dp"
             android:height="120dp"
-            android:background="@color/orange"
-            android:text="@string/btn_einsatzbereit"
-            android:textSize="26sp"
+            android:background="@drawable/einsatzbereit"
+            android:shadowColor="#000000"
+            android:shadowDx="7"
+            android:shadowDy="8"
+            android:shadowRadius="5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/uebung" />
+            />
 
     </android.support.constraint.ConstraintLayout>
 
