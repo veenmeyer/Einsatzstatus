@@ -20,5 +20,8 @@
     <string name="pref_url_title">Server-URL</string>
     <string name="pref_url_summary">komplette URL zur Joomla-Installation</string>
     <string name="button_paypal">Unterstüzte die Entwicklung via PayPal</string>
-    <string name="tv_paypal_description">Diese App wurde programmiert von XXX</string>
+
+    <!--Link zum Paypal (z. B. PayPal.me Link)-->
+    <string name="paypal_link">https://paypal.me/veenmeyer</string>
+    <string name="tv_paypal_description">Entwickelt von einsatzkomponente.de</string>
 </resources>

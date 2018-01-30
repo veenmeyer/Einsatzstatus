@@ -69,6 +69,11 @@ public class MainActivity extends AppCompatActivity
                 } else if (view == btn_einsatzbereit) {
                     new StatusSender(MainActivity.this).execute(server_url, "999", api_key);
                 }
+
+                // Bei Button-Click die Domain registrieren
+                server_url = sharedPrefs.getString("pref_url", "");
+                ic = new InstallationCaller();
+                ic.execute(registration_url + getDomainName(server_url));
             }
         };
 
@@ -91,32 +96,36 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+
         //Registrierung, wenn Domain != null und bisher noch nicht registriert wurde
-        String domain = getDomainName(server_url);
-        if (domain != null && !sharedPrefs.getBoolean("registered", false))
-        {
-            ic = new InstallationCaller();
-            ic.execute(registration_url + domain);
-            sharedPrefs.edit().putBoolean("registered", true).apply();
-        }
+ //       String domain = getDomainName(server_url);
+ //       if (domain != null && !sharedPrefs.getBoolean("registered", false))
+ //       {
+ //           ic = new InstallationCaller();
+ //           ic.execute(registration_url + domain);
+ //           sharedPrefs.edit().putBoolean("registered", true).apply();
+ //       }
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
-        String old_server_url = server_url;
+      //  String old_server_url = server_url;
 
         //Hole neue Parameter aus den Einstellungen
         api_key = sharedPrefs.getString("pref_apikey", "12345");
         server_url = sharedPrefs.getString("pref_url", "");
 
+          ic = new InstallationCaller();
+          ic.execute(registration_url + getDomainName(server_url));
+
         //Prüfe, ob sich die Domain geändert hat. Wenn ja, registriere erneut
-        if(!getDomainName(old_server_url).equals(getDomainName(server_url)))
-        {
-            ic = new InstallationCaller();
-            ic.execute(registration_url + getDomainName(server_url));
-        }
+    //    if(!getDomainName(old_server_url).equals(getDomainName(server_url)))
+    //    {
+          //  ic = new InstallationCaller();
+          //  ic.execute(registration_url + getDomainName(server_url));
+    //    }
     }
 
     //Erstelle Einstellungs-Menü
@@ -151,11 +160,11 @@ public class MainActivity extends AppCompatActivity
         try
         {
             uri = new URI(url);
-            return uri.getHost() != null ? uri.getHost() : "";
+            return uri.getHost() != null ? uri.getHost() : url;
         } catch (URISyntaxException e)
         {
             e.printStackTrace();
-            return "";
+            return url;
         }
     }
 }

@@ -12,19 +12,18 @@
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
         android:text="@string/tv_status"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
+        android:paddingTop="5dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status">
@@ -41,7 +40,7 @@
             android:textColor="@android:color/white"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/hilfeleistung"
@@ -56,7 +55,7 @@
             android:textSize="16sp"
             app:layout_constraintLeft_toRightOf="@+id/feueralarm"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/uebung"
@@ -69,7 +68,7 @@
             android:text="@string/btn_uebung"
             android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/feueralarm"/>
+            app:layout_constraintTop_toBottomOf="@+id/feueralarm" />
 
         <Button
             android:id="@+id/sonstiger"
@@ -83,7 +82,7 @@
             android:textSize="16sp"
             app:layout_constraintLeft_toRightOf="@+id/uebung"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hilfeleistung"/>
+            app:layout_constraintTop_toBottomOf="@+id/hilfeleistung" />
 
         <Button
             android:id="@+id/einsatzbereit"
@@ -96,7 +95,7 @@
             android:text="@string/btn_einsatzbereit"
             android:textSize="26sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/uebung"/>
+            app:layout_constraintTop_toBottomOf="@+id/uebung" />
 
     </android.support.constraint.ConstraintLayout>
 
