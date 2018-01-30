@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Einsatzstatus App</string>
+    <string name="btn_feueralarn">Feueralarm</string>
+    <string name="btn_hilfeleistung">Hilfeleistung</string>
+    <string name="btn_uebung">Übungsdienst</string>
+    <string name="btn_sonstiger">Sonstiger\nEinsatz</string>
+    <string name="btn_einsatzbereit">Einsatzbereit</string>
+    <string name="tv_status"></string>
+    <string name="tv_status_refresh">Aktualisiere Status…</string>
+    <string name="tv_status_200">Status erfolgreich übertragen</string>
+    <string name="tv_status_401">API-Key falsch, bitte prüfen</string>
+    <string name="tv_status_404">Status nicht vorhanden, bitte prüfen</string>
+    <string name="tv_status_error">Sonstiger Fehler, Fehlercode: </string>
+
+    <!-- Settings -->
+    <string name="pref_menu_entry">Einstellungen</string>
+    <string name="pref_screen">Servereinstellungen</string>
+    <string name="pref_api_title">API-Schlüssel</string>
+    <string name="pref_api_summary">API-Schlüssel des Joomla-Moduls</string>
+    <string name="pref_url_title">Server-URL</string>
+    <string name="pref_url_summary">komplette URL zur Joomla-Installation</string>
+    <string name="button_paypal">Unterstüzte die Entwicklung via PayPal</string>
+    <string name="tv_paypal_description">Diese App wurde programmiert von XXX</string>
+</resources>
