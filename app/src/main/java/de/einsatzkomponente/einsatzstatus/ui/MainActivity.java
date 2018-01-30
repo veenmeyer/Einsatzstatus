@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 try
                 {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(paypal_link));
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.paypal_link)));
                     startActivity(browserIntent);
                 } catch (Exception e)
                 {
