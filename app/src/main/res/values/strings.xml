@@ -19,6 +19,8 @@
     <string name="pref_api_summary">API-Schlüssel des Joomla-Moduls</string>
     <string name="pref_url_title">Server-URL</string>
     <string name="pref_url_summary">komplette URL zur Joomla-Installation</string>
+    <string name="pref_ordner_title">Ordner</string>
+    <string name="pref_ordner_summary">Nur bei Problemen angeben</string>
     <string name="button_paypal">Unterstüzte die Entwicklung via PayPal</string>
 
     <!--Link zum Paypal (z. B. PayPal.me Link)-->

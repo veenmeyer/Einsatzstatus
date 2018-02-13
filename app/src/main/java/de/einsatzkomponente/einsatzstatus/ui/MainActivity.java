@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences sharedPrefs;
     String api_key;
     String server_url;
+    String prefordner;
+
     Button btn_feueralarm, btn_hilfeleistung, btn_uebung, btn_sonstiger, btn_einsatzbereit, btn_paypal;
     InstallationCaller ic;
     final String registration_url = "https://einsatzkomponente.de/gateway/sts_validation.php?domain=";
 
-    //Link zum Paypal (z. B. PayPal.me Link)
-    final String paypal_link = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
         sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         api_key = sharedPrefs.getString("pref_apikey", "12345");
         server_url = sharedPrefs.getString("pref_url", "");
+        prefordner = sharedPrefs.getString("pref_ordner", "");
 
         tv_status = findViewById(R.id.status);
         btn_feueralarm = findViewById(R.id.feueralarm);
@@ -59,15 +60,15 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 if(view == btn_feueralarm) {
-                    new StatusSender(MainActivity.this).execute(server_url, "300", api_key);
+                    new StatusSender(MainActivity.this).execute(server_url, "300", api_key,prefordner);
                 } else if (view == btn_hilfeleistung) {
-                    new StatusSender(MainActivity.this).execute(server_url, "400", api_key);
+                    new StatusSender(MainActivity.this).execute(server_url, "400", api_key,prefordner);
                 } else if (view == btn_uebung) {
-                    new StatusSender(MainActivity.this).execute(server_url, "500", api_key);
+                    new StatusSender(MainActivity.this).execute(server_url, "500", api_key,prefordner);
                 } else if (view == btn_sonstiger) {
-                    new StatusSender(MainActivity.this).execute(server_url, "600", api_key);
+                    new StatusSender(MainActivity.this).execute(server_url, "600", api_key,prefordner);
                 } else if (view == btn_einsatzbereit) {
-                    new StatusSender(MainActivity.this).execute(server_url, "999", api_key);
+                    new StatusSender(MainActivity.this).execute(server_url, "999", api_key,prefordner);
                 }
 
                 // Bei Button-Click die Domain registrieren

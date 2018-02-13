@@ -17,6 +17,11 @@
             android:title="@string/pref_url_title"
             android:summary="@string/pref_url_summary"/>
 
+        <EditTextPreference
+            android:key="pref_ordner"
+            android:title="@string/pref_ordner_title"
+            android:summary="@string/pref_ordner_summary"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>

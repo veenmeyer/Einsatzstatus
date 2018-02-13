@@ -48,6 +48,7 @@ public class StatusSender extends AsyncTask<String, Void, String[]>
         resetButtonTexts();
         //Setze Status-Text
         tv_status.setText(activity.getString(R.string.tv_status_refresh));
+
     }
 
     /* POST-Anfrage an den Server
@@ -86,7 +87,7 @@ public class StatusSender extends AsyncTask<String, Void, String[]>
              * params[1]: status-Nummer
              * params[2]: API-Key
              */
-            writer.write("ordner="+params[0]+"&einsatz="+params[1]+"&api="+params[2]);
+            writer.write("ordner="+params[0]+"&einsatz="+params[1]+"&api="+params[2]+"&prefordner="+params[3]);
 
             writer.flush();
             writer.close();
